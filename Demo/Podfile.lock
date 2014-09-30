@@ -1,0 +1,17 @@
+PODS:
+  - DRPickerView (0.1.0):
+    - Haystack
+  - Haystack (0.5.2)
+
+DEPENDENCIES:
+  - DRPickerView (from `../DRPickerView.podspec`)
+
+EXTERNAL SOURCES:
+  DRPickerView:
+    :path: ../DRPickerView.podspec
+
+SPEC CHECKSUMS:
+  DRPickerView: a817bc02d99c42fd8bae7881c670ad4503f5d68e
+  Haystack: a67a8e4861b940af56ed96594cde7a439e42f48e
+
+COCOAPODS: 0.34.1

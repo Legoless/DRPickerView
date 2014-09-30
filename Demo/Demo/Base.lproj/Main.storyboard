@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="R4W-kp-31v">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--DRPickerView-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="DKViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom picker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abT-oA-XtB">
+                                <rect key="frame" x="105" y="118" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date picker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2R-1m-aPw">
+                                <rect key="frame" x="116" y="237" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFl-Gg-HfR" customClass="DRPickerView">
+                                <rect key="frame" x="63" y="153" width="195" height="43"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="H6c-fz-OA9"/>
+                                    <constraint firstAttribute="width" constant="195" id="ku0-ar-sfD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guM-Sv-DjL" customClass="DRPickerView">
+                                <rect key="frame" x="63" y="271" width="195" height="43"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Hx0-kz-RjH"/>
+                                    <constraint firstAttribute="width" constant="195" id="RDW-Ti-pYA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="abT-oA-XtB" secondAttribute="centerX" constant="-0.5" id="8bu-AO-fyb"/>
+                            <constraint firstItem="guM-Sv-DjL" firstAttribute="top" secondItem="M2R-1m-aPw" secondAttribute="bottom" constant="14" id="A8I-vi-vBA"/>
+                            <constraint firstItem="M2R-1m-aPw" firstAttribute="top" secondItem="oFl-Gg-HfR" secondAttribute="bottom" constant="41" id="AyV-U9-K81"/>
+                            <constraint firstAttribute="centerX" secondItem="guM-Sv-DjL" secondAttribute="centerX" id="DNh-vr-n14"/>
+                            <constraint firstItem="abT-oA-XtB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="54" id="WIf-ID-b3c"/>
+                            <constraint firstAttribute="centerX" secondItem="M2R-1m-aPw" secondAttribute="centerX" id="bH3-ds-TV2"/>
+                            <constraint firstAttribute="centerX" secondItem="oFl-Gg-HfR" secondAttribute="centerX" id="eFA-rB-bdN"/>
+                            <constraint firstItem="oFl-Gg-HfR" firstAttribute="top" secondItem="abT-oA-XtB" secondAttribute="bottom" constant="14" id="sMz-qr-KN9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DRPickerView" id="Tbi-w3-Wvo"/>
+                    <connections>
+                        <outlet property="customPicker" destination="oFl-Gg-HfR" id="lrK-Ak-ici"/>
+                        <outlet property="datePicker" destination="guM-Sv-DjL" id="BfQ-8y-pVi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qtf-2V-TjN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R4W-kp-31v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aql-aS-5eI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="YYU-QJ-KjD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRD-fd-akz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="138"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
