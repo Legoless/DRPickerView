@@ -22,12 +22,26 @@
 @property (nonatomic, strong) UIActivityIndicatorView *loadingIndicatorView;
 @property (nonatomic, weak) id<DRPickerDelegate> delegate;
 
+@property (nonatomic) BOOL dateSelector;
+
+@property (nonatomic) BOOL canCancel;
+
+#pragma mark - UIPickerView
+
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic) NSInteger selectedIndex;
+
+@property (nonatomic, readonly) UIPickerView *itemPicker;
+
+#pragma mark - UIDatePicker
+
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+@property (nonatomic) UIDatePickerMode datePickerMode;
 @property (nonatomic, strong) NSDate *selectedDate;
-@property (nonatomic) BOOL dateSelector;
-@property (nonatomic) BOOL allowsTap;
-@property (nonatomic) BOOL canCancel;
+
+@property (nonatomic, readonly) UIDatePicker *datePicker;
+
+#pragma mark - Public methods
 
 - (void)displayPicker;
 
