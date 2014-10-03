@@ -1,7 +1,11 @@
 DRPickerView
 ============
 
-Custom picker view
+Custom UIView with support for both UIDatePicker and custom UIPickerView, both wrapped with dismissable toolbar and tap recognizers. It has very easy to use API.
+
+# Install
+
+pod DRPickerView
 
 Contact
 ======
